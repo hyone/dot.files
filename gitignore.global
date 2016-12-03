@@ -1,0 +1,14 @@
+*.swp
+*.swo
+*.pyc
+*.elc
+*.bak
+*.old
+*~
+\#*\#
+tags
+.svn
+.DS_Store
+.*
+node_modules/
+bower_components/

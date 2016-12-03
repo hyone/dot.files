@@ -1,0 +1,17 @@
+edit on
+bind "^A" ed-move-to-beg
+bind "^E" ed-move-to-end
+bind "^D" ed-delete-next-char
+bind "^H" ed-delete-prev-char
+bind "^K" ed-kill-line
+bind "^R" em-inc-search-prev
+bind "^U" vi-kill-line-prev
+bind "^[k" ed-search-prev-history
+bind "^[j" ed-search-next-history
+bind "^[h" vi-prev-word
+bind "^[l" vi-next-word
+bind "^[u" vi-undo
+bind "\t" rl_complete
+bind "\n" ed-newline
+
+# see also: "man 5 editrc"

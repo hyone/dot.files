@@ -1,0 +1,26 @@
+# global keybinds
+"\C-b": backward-char
+"\C-f": forward-char
+"\C-n": next-history
+"\C-p": previous-history
+"\C-k": kill-line
+"\C-h": backward-delete-char
+# Meta
+"\el": forward-word
+"\eh": backward-word
+
+# # display '*' before prompt when on history buffer edit mode
+# set mark-modified-lines on
+
+$if Gauche
+  set blink-matching-paren on
+$endif
+
+$if mysql
+"\C-xd": "show databases;\r"
+"\C-xt": "show tables;\r"
+"\C-xf": "show fields from "
+"\C-xu": "select user,host,password from mysql.user order by user,host;\r"
+"\C-xb": "select user,host,db from mysql.db order by user,host;\r"
+"\C-xc": "show create table  \\G"
+$endif

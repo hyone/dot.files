@@ -1,0 +1,27 @@
+# AllCops:
+#   TargetRubyVersion: 2.3
+
+Metrics/AbcSize:
+  Enabled: false
+
+# Configuration parameters: CountComments.
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/LambdaCall:
+  Enabled: false
+
+Style/PredicateName:
+  Enabled: false
+
+Style/SpaceBeforeFirstArg:
+  Enabled: false

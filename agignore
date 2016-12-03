@@ -1,0 +1,8 @@
+node_modules/
+bower_components/
+*.min.*
+*.*.map
+*.zip
+.*.swp
+vendor/
+/_build/

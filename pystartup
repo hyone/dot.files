@@ -1,0 +1,25 @@
+# -*- encoding: utf-8 -*-
+"""
+* enable code completion
+* save history when finishing a session
+"""
+
+import atexit
+import os
+import readline
+import rlcompleter
+
+history_path = os.path.expanduser("~/.pyhistory")
+if not os.path.exists(history_path):
+    file(history_path, 'w').close()
+
+readline.parse_and_bind("tab: complete")
+
+def saveHistory(history_path=history_path):
+    import readline
+    readline.write_history_file(history_path)
+
+readline.read_history_file(history_path)
+
+atexit.register(saveHistory)
+del os, atexit, readline, rlcompleter, saveHistory, history_path

@@ -1,0 +1,3 @@
+# Type 'G' to open the commit on github
+bind main O !@hub browse -- commit/%(commit)
+bind diff O !@hub browse -- commit/%(commit)

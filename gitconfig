@@ -1,0 +1,56 @@
+[core]
+    pager = cat
+    editor = vim
+    excludesfile = ~/etc/sh/gitignore.global
+    autocrlf = input
+
+[alias]
+    a  = add
+    ap = add -p
+    b  = branch
+    br = branch
+    ba = branch -a
+    ci = commit -v
+    co = checkout
+    d  = diff
+    dc = diff --cached
+    gr = grep -n
+    sb = submodule
+    st = status
+    wc = whatchanged
+
+    l             = log
+    ll            = log --pretty=format:'%C(auto)%h %ci %an: %s' -15
+    lla           = log --pretty=format:'%C(auto)%h %ci %an: %s'
+    rev-graph-all = log --graph --all --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+    rev-graoh     = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+
+    ranking = shortlog -s -n --no-merges
+
+[user]
+    email = hyone.development@gmail.com
+    name = hyone
+
+[color]
+    ui = auto
+
+[push]
+    default = simple
+
+[http]
+    postBuffer = 104857600
+
+# Third party configurations
+# ------------------------------
+
+[ghq]
+    root = ~/src
+
+[github]
+    user = hyone
+
+# Load external files
+# ------------------------------
+
+[include]
+    path = ~/.gitconfig.local

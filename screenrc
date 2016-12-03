@@ -1,0 +1,84 @@
+defencoding utf8
+encoding utf8 
+
+shell zsh
+
+vbell off
+bell_msg ""
+
+#   detach automatically when terminal suddenly aborts.
+autodetach on
+
+## 256 colors
+
+#   erase background with current bg color
+defbce "on"
+
+#   to avoid to use 'screen-bce' as $TERM
+term screen-256color
+
+# termcapinfo xterm-256color 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+termcapinfo screen-256color-bce 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+
+#   allow bold colors - necessary for some reason
+# attrcolor b ".I"
+
+#   a amount of line in a scroll buffer
+defscrollback 8192
+
+#   show a list of window on status line
+# hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
+# hardstatus ignore "#%n %t | %h"
+
+#   caption
+#   see: man screen - STRING ESCAPE
+#   [example]
+#   %-w      : windows up to the current window
+#   %n       : window number
+#   %t       : widnow title
+#   %+w      : windows after the current one
+#   %{=b kw} : bold, background-color=black, foreground-color=white
+caption always "%?%F%{= KW}%:%{= ww}%?%-w%{=b kW}%n %t%{-}%+w "
+
+
+# # logging
+log on
+deflog on
+logtstamp on
+logfile "$HOME/log/screen-%Y%m%d.%n.log"
+
+#------------------------------------------------------------------------------
+# keybind
+#------------------------------------------------------------------------------
+escape ^tt
+
+# #   keep window until escape key pressed when process dies.
+# zombie ^[
+
+#   move between window(tab)
+bind l next
+bind h prev
+bind w windowlist
+
+#   move between separeted frames
+bind j focus down
+bind k focus up
+
+#   paste
+bind p paste .
+
+# copy mode
+#---------------------------------
+
+# map J to scroll down by a page
+# map K to scroll up by a page
+
+#   scroll down or up by J,K
+markkeys ^b=K:^f=J
+
+
+# ===============================================================================
+# Include local settings
+# ===============================================================================
+
+source $HOME/.screenrc.local
