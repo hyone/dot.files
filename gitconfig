@@ -43,9 +43,6 @@
 # Third party configurations
 # ------------------------------
 
-[ghq]
-    root = ~/src
-
 [github]
     user = hyone
 
