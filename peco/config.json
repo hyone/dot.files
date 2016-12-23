@@ -1,6 +1,7 @@
 {
   "Keymap": {
-    "C-c": "peco.Cancel"
+    "C-c": "peco.Cancel",
+    "C-g": "peco.Cancel"
   },
   "Style": {
     "Selected": ["blue", "on_black", "on_bold"],
