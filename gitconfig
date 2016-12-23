@@ -46,7 +46,7 @@
 [github]
     user = hyone
 
-# Load external files
+# Load local configurations
 # ------------------------------
 
 [include]
