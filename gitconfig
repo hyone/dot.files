@@ -40,7 +40,7 @@
     diff = diff-highlight
 
 [push]
-    default = simple
+    default = current
 
 [http]
     postBuffer = 104857600
