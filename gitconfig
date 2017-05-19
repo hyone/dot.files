@@ -34,6 +34,11 @@
 [color]
     ui = auto
 
+[pager]
+    log  = diff-highlight
+    show = diff-highlight
+    diff = diff-highlight
+
 [push]
     default = simple
 
